@@ -1,0 +1,691 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://apievangelist.com/schemas/redoc/redoc-configuration.json",
+  "title": "ReDoc Configuration",
+  "description": "Configuration options for ReDoc, the open-source API documentation renderer for OpenAPI specifications. These options control the functional behavior, appearance, and theme of the rendered documentation.",
+  "type": "object",
+  "properties": {
+    "disableSearch": {
+      "type": "boolean",
+      "description": "Disables search indexing and hides the search box from the API documentation page.",
+      "default": false
+    },
+    "minCharacterLengthToInitSearch": {
+      "type": "integer",
+      "description": "Sets the minimum number of characters that need to be typed into the search dialog to initiate the search.",
+      "default": 3,
+      "minimum": 1
+    },
+    "hideDownloadButtons": {
+      "type": "boolean",
+      "description": "Hides the Download button for saving the API definition source file. This setting does not make the API definition private; it just hides the button.",
+      "default": false
+    },
+    "hideLoading": {
+      "type": "boolean",
+      "description": "Hides the loading animation. Does not apply to CLI or Workflows-rendered docs.",
+      "default": false
+    },
+    "hideSchemaTitles": {
+      "type": "boolean",
+      "description": "Hides the schema title next to the type.",
+      "default": false
+    },
+    "jsonSamplesExpandLevel": {
+      "oneOf": [
+        {
+          "type": "integer",
+          "minimum": 0,
+          "description": "A numeric level to expand JSON payload samples to."
+        },
+        {
+          "type": "string",
+          "enum": ["all"],
+          "description": "Expand all levels of JSON payload samples."
+        }
+      ],
+      "description": "Sets the default expand level for JSON payload samples (response and request body). The default value is 2. Use 'all' to expand all levels.",
+      "default": 2
+    },
+    "maxDisplayedEnumValues": {
+      "type": "integer",
+      "description": "Displays only the specified number of enum values. Remaining values are hidden in an expandable area. If not set, all values are displayed.",
+      "minimum": 1
+    },
+    "onlyRequiredInSamples": {
+      "type": "boolean",
+      "description": "Shows only required fields in request samples.",
+      "default": false
+    },
+    "sortRequiredPropsFirst": {
+      "type": "boolean",
+      "description": "Shows required properties in schemas first, ordered in the same order as in the required array.",
+      "default": false
+    },
+    "schemasExpansionLevel": {
+      "oneOf": [
+        {
+          "type": "integer",
+          "minimum": 0,
+          "description": "A numeric level to auto-expand schemas to."
+        },
+        {
+          "type": "string",
+          "enum": ["all"],
+          "description": "Expand all schemas regardless of their level."
+        }
+      ],
+      "description": "Specifies whether to automatically expand schemas in Reference docs. Set to 'all' to expand all schemas, or a number to expand schemas up to that level. Default is 0 (no expansion).",
+      "default": 0
+    },
+    "scrollYOffset": {
+      "oneOf": [
+        {
+          "type": "number",
+          "description": "A fixed number of pixels to be used as the vertical scroll offset."
+        },
+        {
+          "type": "string",
+          "description": "A CSS selector for an element whose bottom edge defines the scroll offset."
+        }
+      ],
+      "description": "Specifies a vertical scroll-offset. Useful when fixed positioned elements (such as navbars or headers) are at the top of the page."
+    },
+    "showExtensions": {
+      "oneOf": [
+        {
+          "type": "boolean",
+          "description": "When true, shows all specification extensions (x- fields). Extensions used by Redoc are ignored."
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "An array of extension names to selectively display."
+        }
+      ],
+      "description": "Shows specification extensions (x- fields). Can be a boolean or an array of extension names.",
+      "default": false
+    },
+    "sanitize": {
+      "type": "boolean",
+      "description": "If set to true, the API definition is considered untrusted and all HTML/Markdown is sanitized to prevent XSS.",
+      "default": false
+    },
+    "downloadUrls": {
+      "type": "array",
+      "description": "Set the URLs used to download the OpenAPI description or other documentation-related files from the API documentation page.",
+      "items": {
+        "$ref": "#/$defs/DownloadUrl"
+      }
+    },
+    "schemaDefinitionsTagName": {
+      "type": "string",
+      "description": "If a value is set, all schemas are rendered with the designated tag name and displayed in the sidebar navigation.",
+      "minLength": 1
+    },
+    "generatedSamplesMaxDepth": {
+      "type": "integer",
+      "description": "Controls how many schema levels are automatically generated for payload samples.",
+      "default": 8,
+      "minimum": 1
+    },
+    "hidePropertiesPrefix": {
+      "type": "boolean",
+      "description": "Enables hiding of parent names for nested properties within the documentation in complex data structures.",
+      "default": true
+    },
+    "expandDefaultServerVariables": {
+      "type": "boolean",
+      "description": "Enables or disables expanding default server variables.",
+      "default": false
+    },
+    "expandResponses": {
+      "oneOf": [
+        {
+          "type": "string",
+          "pattern": "^(all|[0-9]+(,[0-9]+)*)$",
+          "description": "Comma-separated HTTP response codes to expand, or 'all' to expand all responses."
+        }
+      ],
+      "description": "Controls which responses to expand by default. Specify response codes as a comma-separated list (e.g. '200,201') or use 'all' to expand all."
+    },
+    "expandSingleSchemaField": {
+      "type": "boolean",
+      "description": "Automatically expands the single field in a schema.",
+      "default": false
+    },
+    "hideHostname": {
+      "type": "boolean",
+      "description": "If set to true, the protocol and hostname are not shown in the operation definition.",
+      "default": false
+    },
+    "hideRequestPayloadSample": {
+      "type": "boolean",
+      "description": "Hides request payload examples.",
+      "default": false
+    },
+    "hideOneOfDescription": {
+      "type": "boolean",
+      "description": "If set to true, the description for oneOf/anyOf objects is not shown in the schema.",
+      "default": false
+    },
+    "hideSchemaPattern": {
+      "type": "boolean",
+      "description": "If set to true, the pattern is not shown in the schema.",
+      "default": false
+    },
+    "hideSecuritySection": {
+      "type": "boolean",
+      "description": "Hides the Security panel section.",
+      "default": false
+    },
+    "hideSingleRequestSampleTab": {
+      "type": "boolean",
+      "description": "Hides the request sample tab for requests with only one sample.",
+      "default": false
+    },
+    "menuToggle": {
+      "type": "boolean",
+      "description": "If set to true, selecting an expanded item in the sidebar twice collapses it.",
+      "default": true
+    },
+    "nativeScrollbars": {
+      "type": "boolean",
+      "description": "If set to true, the sidebar uses the native scrollbar instead of perfect-scroll. A scrolling performance optimization for large API definitions.",
+      "default": false
+    },
+    "pathInMiddlePanel": {
+      "type": "boolean",
+      "description": "Shows the path link and HTTP verb in the middle panel instead of the right panel.",
+      "default": false
+    },
+    "payloadSampleIdx": {
+      "type": "integer",
+      "description": "If set, the payload sample is inserted at the specified index. Indexes start from 0.",
+      "minimum": 0
+    },
+    "showObjectSchemaExamples": {
+      "type": "boolean",
+      "description": "Shows object schema example in the properties.",
+      "default": false
+    },
+    "showWebhookVerb": {
+      "type": "boolean",
+      "description": "When set to true, shows the HTTP request method for webhooks in operations and in the sidebar.",
+      "default": false
+    },
+    "simpleOneOfTypeLabel": {
+      "type": "boolean",
+      "description": "Shows only unique oneOf types in the label without titles.",
+      "default": false
+    },
+    "sortEnumValuesAlphabetically": {
+      "type": "boolean",
+      "description": "When set to true, sorts all enum values in all schemas alphabetically.",
+      "default": false
+    },
+    "sortOperationsAlphabetically": {
+      "type": "boolean",
+      "description": "When set to true, sorts operations in the navigation sidebar and in the middle panel alphabetically.",
+      "default": false
+    },
+    "sortPropsAlphabetically": {
+      "type": "boolean",
+      "description": "When set to true, sorts properties in all schemas alphabetically.",
+      "default": false
+    },
+    "sortTagsAlphabetically": {
+      "type": "boolean",
+      "description": "When set to true, sorts tags in the navigation sidebar and in the middle panel alphabetically.",
+      "default": false
+    },
+    "untrustedSpec": {
+      "type": "boolean",
+      "description": "If set to true, the API definition is considered untrusted and all HTML/Markdown is sanitized to prevent XSS.",
+      "default": false
+    },
+    "theme": {
+      "$ref": "#/$defs/ThemeOptions",
+      "description": "Theme and visual styling options for the API documentation page."
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "DownloadUrl": {
+      "type": "object",
+      "description": "A URL entry for downloading an OpenAPI description or related documentation file.",
+      "required": ["url"],
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "description": "The URL pointing to the downloadable file."
+        },
+        "title": {
+          "type": "string",
+          "description": "A human-readable label for the download link."
+        }
+      },
+      "additionalProperties": false
+    },
+    "ThemeOptions": {
+      "type": "object",
+      "description": "Visual theme configuration for the Redoc documentation renderer.",
+      "properties": {
+        "spacing": {
+          "$ref": "#/$defs/SpacingOptions",
+          "description": "Spacing and padding settings used in the layout."
+        },
+        "breakpoints": {
+          "$ref": "#/$defs/BreakpointOptions",
+          "description": "Breakpoints for switching between three-panel, two-panel, and mobile view layouts."
+        },
+        "colors": {
+          "$ref": "#/$defs/ColorOptions",
+          "description": "Color settings including tonal offset and primary/secondary palette."
+        },
+        "typography": {
+          "$ref": "#/$defs/TypographyOptions",
+          "description": "Typography settings including font family, size, weight, and line height."
+        },
+        "sidebar": {
+          "$ref": "#/$defs/SidebarOptions",
+          "description": "Sidebar width, background color, text color, and item styling."
+        },
+        "logo": {
+          "$ref": "#/$defs/LogoOptions",
+          "description": "Logo display settings including max dimensions and padding."
+        },
+        "rightPanel": {
+          "$ref": "#/$defs/RightPanelOptions",
+          "description": "Right panel background color, width, text color, and server display options."
+        },
+        "fab": {
+          "$ref": "#/$defs/FabOptions",
+          "description": "Floating action button (FAB) styling."
+        }
+      },
+      "additionalProperties": false
+    },
+    "SpacingOptions": {
+      "type": "object",
+      "description": "Spacing configuration for the Redoc layout.",
+      "properties": {
+        "unit": {
+          "type": "integer",
+          "description": "Main spacing unit (in pixels) used in auto-computed theme values.",
+          "default": 5
+        },
+        "sectionHorizontal": {
+          "type": "integer",
+          "description": "Horizontal section padding in pixels. Defaults to spacing.unit * 8.",
+          "default": 40
+        },
+        "sectionVertical": {
+          "type": "integer",
+          "description": "Vertical section padding in pixels. Defaults to spacing.unit * 8.",
+          "default": 40
+        }
+      },
+      "additionalProperties": false
+    },
+    "BreakpointOptions": {
+      "type": "object",
+      "description": "Responsive breakpoints for layout switching.",
+      "properties": {
+        "small": {
+          "type": "string",
+          "description": "Breakpoint for switching to mobile view.",
+          "default": "50rem"
+        },
+        "medium": {
+          "type": "string",
+          "description": "Breakpoint for switching to two-panel view.",
+          "default": "85rem"
+        },
+        "large": {
+          "type": "string",
+          "description": "Breakpoint for switching to three-panel view.",
+          "default": "105rem"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ColorOptions": {
+      "type": "object",
+      "description": "Color palette settings for the Redoc theme.",
+      "properties": {
+        "tonalOffset": {
+          "type": "number",
+          "description": "Default tonal offset used in color computations.",
+          "default": 0.3,
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "TypographyOptions": {
+      "type": "object",
+      "description": "Typography settings for the Redoc documentation.",
+      "properties": {
+        "fontSize": {
+          "type": "string",
+          "description": "Base font size for body text.",
+          "default": "14px"
+        },
+        "lineHeight": {
+          "type": "string",
+          "description": "Base line height for body text.",
+          "default": "1.5em"
+        },
+        "fontWeightRegular": {
+          "type": "string",
+          "description": "Font weight for regular text.",
+          "default": "400"
+        },
+        "fontWeightBold": {
+          "type": "string",
+          "description": "Font weight for bold text.",
+          "default": "600"
+        },
+        "fontWeightLight": {
+          "type": "string",
+          "description": "Font weight for light text.",
+          "default": "300"
+        },
+        "fontFamily": {
+          "type": "string",
+          "description": "Font family for body text.",
+          "default": "Roboto, sans-serif"
+        },
+        "smoothing": {
+          "type": "string",
+          "description": "Font smoothing setting.",
+          "default": "antialiased"
+        },
+        "optimizeSpeed": {
+          "type": "boolean",
+          "description": "Whether to optimize text rendering for speed.",
+          "default": true
+        },
+        "headings": {
+          "$ref": "#/$defs/HeadingTypographyOptions",
+          "description": "Typography settings specific to headings."
+        },
+        "code": {
+          "$ref": "#/$defs/CodeTypographyOptions",
+          "description": "Typography settings for inline code blocks."
+        },
+        "links": {
+          "$ref": "#/$defs/LinkTypographyOptions",
+          "description": "Typography settings for hyperlinks."
+        }
+      },
+      "additionalProperties": false
+    },
+    "HeadingTypographyOptions": {
+      "type": "object",
+      "description": "Typography settings for headings.",
+      "properties": {
+        "fontFamily": {
+          "type": "string",
+          "description": "Font family for headings.",
+          "default": "Montserrat, sans-serif"
+        },
+        "fontWeight": {
+          "type": "string",
+          "description": "Font weight for headings.",
+          "default": "400"
+        },
+        "lineHeight": {
+          "type": "string",
+          "description": "Line height for headings.",
+          "default": "1.6em"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CodeTypographyOptions": {
+      "type": "object",
+      "description": "Typography settings for inline code.",
+      "properties": {
+        "fontSize": {
+          "type": "string",
+          "description": "Font size for inline code.",
+          "default": "13px"
+        },
+        "fontFamily": {
+          "type": "string",
+          "description": "Font family for inline code.",
+          "default": "Courier, monospace"
+        },
+        "fontWeight": {
+          "type": "string",
+          "description": "Font weight for inline code."
+        },
+        "color": {
+          "type": "string",
+          "description": "Text color for inline code.",
+          "default": "#e53935"
+        },
+        "backgroundColor": {
+          "type": "string",
+          "description": "Background color for inline code.",
+          "default": "rgba(38, 50, 56, 0.05)"
+        },
+        "wrap": {
+          "type": "boolean",
+          "description": "Whether to break word for inline blocks (otherwise they can overflow).",
+          "default": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "LinkTypographyOptions": {
+      "type": "object",
+      "description": "Typography and color settings for hyperlinks.",
+      "properties": {
+        "color": {
+          "type": "string",
+          "description": "Link text color. Defaults to the primary color."
+        },
+        "visited": {
+          "type": "string",
+          "description": "Visited link color. Defaults to the link color."
+        },
+        "hover": {
+          "type": "string",
+          "description": "Hover link color. Defaults to a lightened version of the link color."
+        },
+        "textDecoration": {
+          "type": "string",
+          "description": "CSS text-decoration for links.",
+          "default": "auto"
+        },
+        "hoverTextDecoration": {
+          "type": "string",
+          "description": "CSS text-decoration for links on hover.",
+          "default": "auto"
+        }
+      },
+      "additionalProperties": false
+    },
+    "SidebarOptions": {
+      "type": "object",
+      "description": "Styling and layout options for the navigation sidebar.",
+      "properties": {
+        "width": {
+          "type": "string",
+          "description": "Width of the sidebar.",
+          "default": "260px"
+        },
+        "backgroundColor": {
+          "type": "string",
+          "description": "Background color of the sidebar.",
+          "default": "#fafafa"
+        },
+        "textColor": {
+          "type": "string",
+          "description": "Text color in the sidebar.",
+          "default": "#333333"
+        },
+        "activeTextColor": {
+          "type": "string",
+          "description": "Text color for the active sidebar item. Defaults to the primary color."
+        },
+        "groupItems": {
+          "$ref": "#/$defs/SidebarItemOptions",
+          "description": "Styling for group heading items in the sidebar."
+        },
+        "level1Items": {
+          "$ref": "#/$defs/SidebarItemOptions",
+          "description": "Styling for level 1 sidebar items such as tags and section headings."
+        },
+        "arrow": {
+          "$ref": "#/$defs/SidebarArrowOptions",
+          "description": "Styling for the sidebar expand/collapse arrow."
+        }
+      },
+      "additionalProperties": false
+    },
+    "SidebarItemOptions": {
+      "type": "object",
+      "description": "Styling for a category of sidebar items.",
+      "properties": {
+        "activeBackgroundColor": {
+          "type": "string",
+          "description": "Background color for the active state of this sidebar item group."
+        },
+        "activeTextColor": {
+          "type": "string",
+          "description": "Text color for the active state of this sidebar item group."
+        },
+        "textTransform": {
+          "type": "string",
+          "description": "CSS text-transform for sidebar item labels.",
+          "enum": ["uppercase", "lowercase", "capitalize", "none"],
+          "default": "none"
+        }
+      },
+      "additionalProperties": false
+    },
+    "SidebarArrowOptions": {
+      "type": "object",
+      "description": "Styling for the sidebar navigation arrow icon.",
+      "properties": {
+        "size": {
+          "type": "string",
+          "description": "Size of the arrow icon.",
+          "default": "1.5em"
+        },
+        "color": {
+          "type": "string",
+          "description": "Color of the arrow icon. Defaults to the sidebar text color."
+        }
+      },
+      "additionalProperties": false
+    },
+    "LogoOptions": {
+      "type": "object",
+      "description": "Display settings for the logo shown above the sidebar.",
+      "properties": {
+        "maxHeight": {
+          "type": "string",
+          "description": "Maximum height of the logo image. Defaults to the sidebar width."
+        },
+        "maxWidth": {
+          "type": "string",
+          "description": "Maximum width of the logo image. Defaults to the sidebar width."
+        },
+        "gutter": {
+          "type": "string",
+          "description": "Padding around the logo image.",
+          "default": "2px"
+        }
+      },
+      "additionalProperties": false
+    },
+    "RightPanelOptions": {
+      "type": "object",
+      "description": "Styling options for the right panel, which shows request and response examples.",
+      "properties": {
+        "backgroundColor": {
+          "type": "string",
+          "description": "Background color of the right panel.",
+          "default": "#263238"
+        },
+        "width": {
+          "type": "string",
+          "description": "Width of the right panel as a percentage or CSS value.",
+          "default": "40%"
+        },
+        "textColor": {
+          "type": "string",
+          "description": "Text color in the right panel.",
+          "default": "#ffffff"
+        },
+        "servers": {
+          "$ref": "#/$defs/RightPanelServersOptions",
+          "description": "Server selector overlay styling in the right panel."
+        }
+      },
+      "additionalProperties": false
+    },
+    "RightPanelServersOptions": {
+      "type": "object",
+      "description": "Styling for the server selector display in the right panel.",
+      "properties": {
+        "overlay": {
+          "type": "object",
+          "description": "Overlay styling for the server selector.",
+          "properties": {
+            "backgroundColor": {
+              "type": "string",
+              "description": "Background color of the server selector overlay.",
+              "default": "#fafafa"
+            },
+            "textColor": {
+              "type": "string",
+              "description": "Text color in the server selector overlay.",
+              "default": "#263238"
+            }
+          },
+          "additionalProperties": false
+        },
+        "url": {
+          "type": "object",
+          "description": "URL display styling in the server selector.",
+          "properties": {
+            "backgroundColor": {
+              "type": "string",
+              "description": "Background color for the server URL display.",
+              "default": "#fff"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "FabOptions": {
+      "type": "object",
+      "description": "Styling options for the floating action button.",
+      "properties": {
+        "backgroundColor": {
+          "type": "string",
+          "description": "Background color of the floating action button.",
+          "default": "#263238"
+        },
+        "color": {
+          "type": "string",
+          "description": "Icon color of the floating action button.",
+          "default": "#ffffff"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

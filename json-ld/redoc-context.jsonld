@@ -1,0 +1,176 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "redoc": "https://redocly.com/redoc/vocab#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+
+    "ApiDocumentation": {
+      "@id": "redoc:ApiDocumentation",
+      "@context": {
+        "specUrl": {
+          "@id": "redoc:specUrl",
+          "@type": "@id"
+        },
+        "title": {
+          "@id": "dcterms:title"
+        },
+        "description": {
+          "@id": "dcterms:description"
+        },
+        "version": {
+          "@id": "schema:version"
+        },
+        "created": {
+          "@id": "dcterms:created",
+          "@type": "xsd:dateTime"
+        },
+        "modified": {
+          "@id": "dcterms:modified",
+          "@type": "xsd:dateTime"
+        },
+        "theme": {
+          "@id": "redoc:theme"
+        },
+        "options": {
+          "@id": "redoc:options"
+        }
+      }
+    },
+
+    "OpenAPISpec": {
+      "@id": "redoc:OpenAPISpec",
+      "@context": {
+        "url": {
+          "@id": "schema:url",
+          "@type": "@id"
+        },
+        "title": {
+          "@id": "dcterms:title"
+        },
+        "description": {
+          "@id": "dcterms:description"
+        },
+        "version": {
+          "@id": "schema:version"
+        },
+        "specVersion": {
+          "@id": "redoc:specVersion"
+        },
+        "servers": {
+          "@id": "redoc:servers",
+          "@container": "@set"
+        },
+        "tags": {
+          "@id": "redoc:tags",
+          "@container": "@set"
+        },
+        "paths": {
+          "@id": "redoc:paths",
+          "@container": "@set"
+        },
+        "components": {
+          "@id": "redoc:components"
+        }
+      }
+    },
+
+    "ThemeConfiguration": {
+      "@id": "redoc:ThemeConfiguration",
+      "@context": {
+        "spacing": {
+          "@id": "redoc:spacing"
+        },
+        "colors": {
+          "@id": "redoc:colors"
+        },
+        "typography": {
+          "@id": "redoc:typography"
+        },
+        "sidebar": {
+          "@id": "redoc:sidebar"
+        },
+        "rightPanel": {
+          "@id": "redoc:rightPanel"
+        },
+        "logo": {
+          "@id": "redoc:logo"
+        }
+      }
+    },
+
+    "TagGroup": {
+      "@id": "redoc:TagGroup",
+      "@context": {
+        "name": {
+          "@id": "schema:name"
+        },
+        "tags": {
+          "@id": "redoc:tags",
+          "@container": "@set"
+        }
+      }
+    },
+
+    "CodeSample": {
+      "@id": "redoc:CodeSample",
+      "@context": {
+        "lang": {
+          "@id": "redoc:lang"
+        },
+        "label": {
+          "@id": "schema:name"
+        },
+        "source": {
+          "@id": "redoc:source"
+        }
+      }
+    },
+
+    "LogoObject": {
+      "@id": "redoc:LogoObject",
+      "@context": {
+        "url": {
+          "@id": "schema:url",
+          "@type": "@id"
+        },
+        "backgroundColor": {
+          "@id": "redoc:backgroundColor"
+        },
+        "altText": {
+          "@id": "schema:alternateName"
+        },
+        "href": {
+          "@id": "schema:url",
+          "@type": "@id"
+        }
+      }
+    },
+
+    "OperationBadge": {
+      "@id": "redoc:OperationBadge",
+      "@context": {
+        "name": {
+          "@id": "schema:name"
+        },
+        "color": {
+          "@id": "redoc:color"
+        }
+      }
+    },
+
+    "ServerObject": {
+      "@id": "redoc:ServerObject",
+      "@context": {
+        "url": {
+          "@id": "schema:url",
+          "@type": "@id"
+        },
+        "description": {
+          "@id": "dcterms:description"
+        }
+      }
+    }
+  }
+}
