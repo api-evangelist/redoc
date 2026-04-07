@@ -32,12 +32,12 @@ apis:
       request and response examples.
 name: ReDoc
 tags:
+  - API Documentation
+  - Developer Tools
   - Documentation
   - OpenAPI
   - Reference
   - Renderer
-  - API Documentation
-  - Developer Tools
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
