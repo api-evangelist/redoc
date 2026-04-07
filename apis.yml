@@ -24,17 +24,12 @@ apis:
       - url: json-ld/redoc-context.jsonld
         type: JSON-LD
     description: >-
-      ReDoc is an open-source API documentation renderer for OpenAPI
-      specifications, originally created by Rebilly and now maintained by
-      Redocly. It generates a responsive three-panel documentation layout from
-      OpenAPI 3.1, 3.0, and Swagger 2.0 definitions. The left panel provides
-      a search bar and navigation menu, the central panel displays the
-      documentation content, and the right panel shows request and response
-      examples. ReDoc is available as a CLI tool, HTML tag, React component,
-      and Docker image, and supports vendor extensions such as x-tagGroups,
-      x-logo, x-codeSamples, x-badges, and x-traitTag for advanced
-      customization. With over 23,000 GitHub stars, it has become a standard
-      for OpenAPI-powered reference documentation.
+      ReDoc is an open-source API documentation renderer for OpenAPI specifications,
+      originally created by Rebilly and now maintained by Redocly. It generates a
+      responsive three-panel documentation layout from OpenAPI 3.1, 3.0, and Swagger
+      2.0 definitions. The left panel provides a search bar and navigation menu, the
+      central panel displays the documentation content, and the right panel shows
+      request and response examples.
 name: ReDoc
 tags:
   - Documentation
