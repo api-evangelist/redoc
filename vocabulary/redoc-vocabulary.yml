@@ -1,0 +1,150 @@
+vocabulary:
+  name: ReDoc Vocabulary
+  description: >-
+    Domain vocabulary for ReDoc, the open-source OpenAPI documentation renderer
+    by Redocly. Covers configuration options, rendering concepts, vendor
+    extensions, deployment methods, and the three-panel layout model.
+  version: "1.0.0"
+  created: "2026-05-02"
+  tags:
+    - API Documentation
+    - Developer Tools
+    - Documentation
+    - OpenAPI
+    - Reference
+
+terms:
+  - term: Three-Panel Layout
+    label: ReDoc Three-Panel Layout
+    definition: >-
+      ReDoc's signature documentation layout consisting of a left navigation
+      sidebar, a central content panel displaying operation details, and a
+      right panel showing request/response code samples. The layout adapts
+      to two-panel (tablet) and single-panel (mobile) at configurable
+      responsive breakpoints.
+
+  - term: Standalone Bundle
+    label: ReDoc Standalone Bundle
+    definition: >-
+      The pre-built JavaScript bundle that includes React and all dependencies
+      for deploying ReDoc without a build system. Available via CDN at
+      cdn.redoc.ly/redoc/latest/bundles/redoc.standalone.js. Used with the
+      custom HTML element or bundled into standalone HTML documentation pages.
+
+  - term: RedocStandalone
+    label: RedocStandalone React Component
+    definition: >-
+      The React component exported from the redoc npm package that renders
+      a full-page documentation view. Accepts specUrl (URL to OpenAPI spec)
+      or spec (parsed JavaScript object) plus an options configuration object.
+
+  - term: x-logo
+    label: x-logo Vendor Extension
+    definition: >-
+      An OpenAPI vendor extension placed in the info object to specify a custom
+      logo for the documentation page. Accepts url (image URL), backgroundColor,
+      altText, and href (link when logo is clicked).
+
+  - term: x-tagGroups
+    label: x-tagGroups Vendor Extension
+    definition: >-
+      An OpenAPI vendor extension at the root level that groups tags into
+      named sections in the sidebar navigation. Each group has a name and
+      a list of tag names. Tags not included in any group appear ungrouped.
+
+  - term: x-codeSamples
+    label: x-codeSamples Vendor Extension
+    definition: >-
+      An OpenAPI vendor extension on operation objects that provides custom
+      code samples for the right panel. Each sample has lang (language key),
+      label (display name), and source (code string). These replace or
+      supplement the auto-generated samples.
+
+  - term: x-internal
+    label: x-internal Vendor Extension
+    definition: >-
+      A vendor extension that marks operations, schemas, or other OpenAPI
+      elements as internal-only. When present and true, ReDoc hides these
+      elements from the rendered documentation. Useful for documenting
+      admin or private endpoints separately.
+
+  - term: Expand Responses
+    label: Expand Responses Option
+    definition: >-
+      A ReDoc configuration option (expandResponses) that controls which
+      HTTP response codes are expanded by default in the documentation.
+      Accepts a comma-separated list of status codes (e.g., "200,201") or
+      the string "all" to expand all responses.
+
+  - term: Schema Expansion Level
+    label: Schemas Expansion Level
+    definition: >-
+      The schemasExpansionLevel configuration option that controls how deep
+      nested schemas are automatically expanded. Default is 0 (collapsed).
+      Set to "all" to fully expand all schemas.
+
+  - term: Tag
+    label: OpenAPI Tag
+    definition: >-
+      A grouping mechanism in OpenAPI that assigns operations to named
+      categories. ReDoc uses tags as the primary navigation structure in the
+      sidebar. Operations sharing a tag are grouped under that tag's section.
+
+  - term: Operation
+    label: OpenAPI Operation
+    definition: >-
+      A single API endpoint defined by an HTTP method and path in an OpenAPI
+      specification. In ReDoc, each operation is rendered as a section in the
+      middle panel with its parameters, request body, responses, and code
+      samples in the right panel.
+
+  - term: Right Panel
+    label: Right Panel
+    definition: >-
+      The third column in ReDoc's three-panel layout that displays server
+      information, authentication examples, and request/response code samples.
+      The background color defaults to dark (#263238) to contrast with the
+      light content in the middle panel.
+
+  - term: Redoc CLI
+    label: Redoc CLI (build-docs)
+    definition: >-
+      The redocly build-docs command (formerly redoc-cli) that generates a
+      standalone HTML file from an OpenAPI definition. The output is a
+      self-contained single-file HTML page with all CSS and JavaScript embedded.
+      Usage: redocly build-docs openapi.yaml -o docs/index.html
+
+  - term: Sanitize
+    label: Sanitize / Untrusted Spec
+    definition: >-
+      Configuration options (sanitize and untrustedSpec) that instruct ReDoc
+      to escape all HTML and Markdown in the OpenAPI description fields before
+      rendering. Prevents XSS attacks when rendering specs from untrusted sources.
+
+  - term: Spec URL
+    label: Spec URL
+    definition: >-
+      The URL passed to ReDoc pointing to the OpenAPI definition file to render.
+      Accepted as a specUrl attribute on the HTML element, a specUrl prop on
+      the React component, or via the --spec-url flag in the CLI.
+
+  - term: Native Scrollbars
+    label: nativeScrollbars Option
+    definition: >-
+      A performance optimization option (nativeScrollbars: true) that replaces
+      ReDoc's perfect-scroll library with the browser's native scrollbars in the
+      sidebar. Recommended for large API specifications with thousands of operations.
+
+  - term: Code Sample
+    label: Code Sample (x-codeSamples)
+    definition: >-
+      A programming example shown in the right panel of ReDoc alongside request
+      and response examples. Can be auto-generated by ReDoc from the operation
+      definition or provided via the x-codeSamples vendor extension.
+
+  - term: Docker Image
+    label: ReDoc Docker Image
+    definition: >-
+      An official Docker image at redocly/redoc that serves ReDoc documentation
+      from a configurable OpenAPI spec URL. Available at hub.docker.com/r/redocly/redoc.
+      Useful for serving API documentation in containerized environments.

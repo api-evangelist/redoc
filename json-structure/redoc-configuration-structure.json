@@ -1,0 +1,49 @@
+{
+  "title": "ReDoc Configuration Structure",
+  "description": "JSON structure documentation for ReDoc configuration options. These options control display, behavior, and theming of the rendered API documentation.",
+  "type": "object",
+  "fields": [
+    { "name": "disableSearch", "type": "boolean", "default": false, "description": "Disable search box and indexing." },
+    { "name": "hideDownloadButtons", "type": "boolean", "default": false, "description": "Hide OpenAPI download buttons." },
+    { "name": "hideLoading", "type": "boolean", "default": false, "description": "Hide loading animation." },
+    { "name": "hideHostname", "type": "boolean", "default": false, "description": "Hide protocol and hostname in operation definitions." },
+    { "name": "hideSchemaTitles", "type": "boolean", "default": false, "description": "Hide schema titles next to types." },
+    { "name": "hideSecuritySection", "type": "boolean", "default": false, "description": "Hide Security panel section." },
+    { "name": "expandResponses", "type": "string", "description": "Comma-separated HTTP codes to expand, or 'all'." },
+    { "name": "jsonSamplesExpandLevel", "type": "integer or 'all'", "default": 2, "description": "Default expand level for JSON samples." },
+    { "name": "schemasExpansionLevel", "type": "integer or 'all'", "default": 0, "description": "Auto-expand schemas to this level." },
+    { "name": "sortPropsAlphabetically", "type": "boolean", "default": false, "description": "Sort properties alphabetically." },
+    { "name": "sortTagsAlphabetically", "type": "boolean", "default": false, "description": "Sort tags alphabetically." },
+    { "name": "sortOperationsAlphabetically", "type": "boolean", "default": false, "description": "Sort operations alphabetically." },
+    { "name": "sortEnumValuesAlphabetically", "type": "boolean", "default": false, "description": "Sort enum values alphabetically." },
+    { "name": "sortRequiredPropsFirst", "type": "boolean", "default": false, "description": "Show required properties first." },
+    { "name": "onlyRequiredInSamples", "type": "boolean", "default": false, "description": "Show only required fields in request samples." },
+    { "name": "showExtensions", "type": "boolean or array", "default": false, "description": "Show OpenAPI x- extension fields." },
+    { "name": "showWebhookVerb", "type": "boolean", "default": false, "description": "Show HTTP method for webhooks." },
+    { "name": "pathInMiddlePanel", "type": "boolean", "default": false, "description": "Show path and HTTP verb in middle panel." },
+    { "name": "nativeScrollbars", "type": "boolean", "default": false, "description": "Use native scrollbars in sidebar." },
+    { "name": "menuToggle", "type": "boolean", "default": true, "description": "Clicking active item collapses it." },
+    { "name": "sanitize", "type": "boolean", "default": false, "description": "Sanitize HTML/Markdown to prevent XSS." },
+    { "name": "untrustedSpec", "type": "boolean", "default": false, "description": "Treat spec as untrusted and sanitize." },
+    { "name": "scrollYOffset", "type": "number or string", "description": "Vertical scroll offset for fixed navbars." },
+    { "name": "maxDisplayedEnumValues", "type": "integer", "description": "Max enum values shown before collapse." },
+    { "name": "schemaDefinitionsTagName", "type": "string", "description": "Tag name for rendering all schemas in sidebar." },
+    { "name": "generatedSamplesMaxDepth", "type": "integer", "default": 8, "description": "Max schema depth for auto-generated samples." },
+    { "name": "downloadUrls", "type": "array", "description": "Custom download button URLs and labels." },
+    {
+      "name": "theme",
+      "type": "object",
+      "description": "Theme configuration object.",
+      "fields": [
+        { "name": "spacing", "type": "object", "description": "Spacing unit and section padding." },
+        { "name": "breakpoints", "type": "object", "description": "Responsive layout breakpoints." },
+        { "name": "colors", "type": "object", "description": "Color palette and tonal offset." },
+        { "name": "typography", "type": "object", "description": "Font family, size, weight, and line height." },
+        { "name": "sidebar", "type": "object", "description": "Sidebar width, colors, and item styling." },
+        { "name": "logo", "type": "object", "description": "Logo max dimensions and padding." },
+        { "name": "rightPanel", "type": "object", "description": "Right panel background, width, and text color." },
+        { "name": "fab", "type": "object", "description": "Floating action button colors." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "description": "Using ReDoc as an HTML custom element in a web page",
+  "html_example": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Petstore API Documentation</title>\n    <meta charset='utf-8'/>\n    <meta name='viewport' content='width=device-width, initial-scale=1'>\n    <link href='https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:300,400,700' rel='stylesheet'>\n    <style>body { margin: 0; padding: 0; }</style>\n  </head>\n  <body>\n    <redoc spec-url='https://petstore3.swagger.io/api/v3/openapi.json'></redoc>\n    <script src='https://cdn.redoc.ly/redoc/latest/bundles/redoc.standalone.js'></script>\n  </body>\n</html>",
+  "with_options": "<!DOCTYPE html>\n<html>\n  <head><title>My API Docs</title></head>\n  <body>\n    <redoc\n      spec-url='https://api.example.com/openapi.json'\n      hide-loading='true'\n      sort-props-alphabetically='true'\n      expand-responses='200,201'\n      theme='{\"colors\":{\"primary\":{\"main\":\"#0066cc\"}},\"sidebar\":{\"width\":\"300px\"}}'\n    ></redoc>\n    <script src='https://cdn.redoc.ly/redoc/latest/bundles/redoc.standalone.js'></script>\n  </body>\n</html>"
+}

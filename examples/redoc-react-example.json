@@ -1,0 +1,12 @@
+{
+  "description": "Using ReDoc as a React component",
+  "npm_install": "npm install redoc styled-components",
+  "basic_usage": {
+    "language": "jsx",
+    "code": "import React from 'react';\nimport { RedocStandalone } from 'redoc';\n\nexport const ApiDocs = () => (\n  <RedocStandalone\n    specUrl='https://petstore3.swagger.io/api/v3/openapi.json'\n    options={{\n      nativeScrollbars: true,\n      theme: { colors: { primary: { main: '#0066cc' } } },\n    }}\n  />\n);"
+  },
+  "with_local_spec": {
+    "language": "jsx",
+    "code": "import React from 'react';\nimport { RedocStandalone } from 'redoc';\nimport spec from './openapi.json';\n\nexport const ApiDocs = () => (\n  <RedocStandalone\n    spec={spec}\n    options={{\n      hideDownloadButtons: true,\n      sortPropsAlphabetically: true,\n      expandResponses: '200',\n      theme: {\n        sidebar: { width: '300px' },\n        rightPanel: { backgroundColor: '#1a1a2e' },\n      },\n    }}\n  />\n);"
+  }
+}

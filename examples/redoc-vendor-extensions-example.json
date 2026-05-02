@@ -1,0 +1,80 @@
+{
+  "description": "ReDoc vendor extensions for enhancing OpenAPI documentation",
+  "extensions": [
+    {
+      "extension": "x-logo",
+      "location": "info object",
+      "description": "Custom logo for the documentation page.",
+      "example": {
+        "info": {
+          "title": "My API",
+          "version": "1.0.0",
+          "x-logo": {
+            "url": "https://example.com/logo.png",
+            "backgroundColor": "#FFFFFF",
+            "altText": "My API Logo",
+            "href": "https://example.com"
+          }
+        }
+      }
+    },
+    {
+      "extension": "x-tagGroups",
+      "location": "root object",
+      "description": "Group tags into sections in the sidebar navigation.",
+      "example": {
+        "x-tagGroups": [
+          {
+            "name": "Pet Management",
+            "tags": ["pets", "orders"]
+          },
+          {
+            "name": "User Management",
+            "tags": ["users", "auth"]
+          }
+        ]
+      }
+    },
+    {
+      "extension": "x-codeSamples",
+      "location": "operation object",
+      "description": "Custom code samples for an operation in multiple languages.",
+      "example": {
+        "paths": {
+          "/pets": {
+            "get": {
+              "summary": "List Pets",
+              "x-codeSamples": [
+                {
+                  "lang": "curl",
+                  "label": "cURL",
+                  "source": "curl -X GET https://api.example.com/pets \\\n  -H 'Authorization: Bearer $TOKEN'"
+                },
+                {
+                  "lang": "python",
+                  "label": "Python",
+                  "source": "import requests\nresponse = requests.get(\n    'https://api.example.com/pets',\n    headers={'Authorization': f'Bearer {token}'}\n)\nprint(response.json())"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "extension": "x-internal",
+      "location": "operation object",
+      "description": "Mark operations as internal-only (hidden from public docs).",
+      "example": {
+        "paths": {
+          "/admin/users": {
+            "get": {
+              "x-internal": true,
+              "summary": "List All Users (Admin)"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
