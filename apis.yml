@@ -56,7 +56,7 @@ apis:
         url: https://redocly.github.io/redoc/
       - type: JSONSchema
         url: json-schema/redoc-configuration-schema.json
-      - type: JSONLd
+      - type: JSONLD
         url: json-ld/redoc-context.jsonld
       - type: JSONStructure
         url: json-structure/redoc-configuration-structure.json
@@ -93,7 +93,7 @@ common:
     type: CLI
   - name: ReDoc Changelog
     url: https://github.com/Redocly/redoc/blob/main/CHANGELOG.md
-    type: Changelog
+    type: ChangeLog
   - name: ReDoc Docker Image
     url: https://hub.docker.com/r/redocly/redoc
     type: Docker
