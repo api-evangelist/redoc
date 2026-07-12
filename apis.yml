@@ -64,6 +64,8 @@ apis:
         url: vocabulary/redoc-vocabulary.yml
 
 common:
+  - type: DomainSecurity
+    url: security/redoc-domain-security.yml
   - name: ReDoc Documentation
     url: https://redocly.com/docs/redoc
     type: Documentation
@@ -112,6 +114,8 @@ common:
   - name: ReDoc License (MIT)
     url: https://github.com/Redocly/redoc/blob/main/LICENSE
     type: License
+  - url: https://redocly.com/blog/feed.xml
+    type: Blog
 
 maintainers:
   - FN: Kin Lane
