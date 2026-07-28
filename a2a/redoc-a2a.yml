@@ -1,0 +1,33 @@
+generated: '2026-07-28'
+method: probed
+source: https://redocly.com/.well-known/agent-card.json
+description: 'A2A Agent Card observed at /.well-known/agent-card.json on redocly.com. Grade is measured
+  against the A2A 1.0.0 AgentCard object: ''conformant'' passes every structural check, ''near-conformant''
+  is correctly shaped but omits optional fields, ''flavored'' fails a hard check and is an agent card
+  in spirit rather than in schema. Provider-published by construction — served from the provider''s own
+  host; nothing here is derived or generated.'
+discovery:
+  path: /.well-known/agent-card.json
+  canonical: true
+  host: redocly.com
+conformance:
+  spec: A2A 1.0.0
+  grade: conformant
+  protocol_version: 0.3.0
+  preferred_transport: HTTP+JSON
+  deviations: []
+card:
+  name: Redocly
+  description: OpenAPI-generated documentation tool with 24k+ stars on Github - make APIs your company's
+    superpower.
+  url: https://redocly.com/a2a
+  version: 0.0.1
+  documentation_url: https://redocly.com/
+  skills: 0
+  file: redoc-agent-card.json
+x-evidence:
+  fetched: '2026-07-28'
+  url: https://redocly.com/.well-known/agent-card.json
+  http_status: 200
+  content_type: application/json
+  note: Verbatim body saved alongside this manifest. No field inferred.
