@@ -27,7 +27,7 @@ position: Consumer
 segments:
   - Documentation
   - Developer Tools
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
   - aid: redoc:redoc
     name: ReDoc
