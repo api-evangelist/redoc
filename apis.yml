@@ -145,6 +145,8 @@ common:
     type: License
   - url: https://redocly.com/blog/feed.xml
     type: Blog
+  - type: Support
+    url: https://redocly.com/contact-us
 
 maintainers:
   - FN: Kin Lane
