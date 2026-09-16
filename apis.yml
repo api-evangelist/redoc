@@ -147,6 +147,8 @@ common:
     type: Blog
   - type: Support
     url: https://redocly.com/contact-us
+  - type: Contact
+    url: mailto:team@redocly.com
 
 maintainers:
   - FN: Kin Lane
