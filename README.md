@@ -1,4 +1,4 @@
-# ReDoc (redoc)
+# ReDoc
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,78 +64,144 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-ReDoc is an open-source API documentation renderer for OpenAPI specifications by Redocly. It generates a responsive three-panel documentation layout from OpenAPI 3.1, 3.0, and Swagger 2.0 definitions. The left panel provides a search bar and navigation menu, the central panel displays documentation content, and the right panel shows request and response examples. Available as a CLI tool, HTML custom element, React component, and Docker image with over 23,000 GitHub stars.
+ReDoc is an open-source API documentation renderer for OpenAPI specifications by Redocly. It generates a responsive three-panel documentation layout from OpenAPI 3.1, 3.0, and Swagger 2.0 definitions. The left panel provides a search bar and navigation menu, the central panel displays documentation content, and the right panel shows request and response examples. ReDoc is available as a CLI tool, HTML custom element, React component, and Docker image. It supports vendor extensions for logos, tag groups, custom code samples, and internal operations.
 
-**URL:** [https://raw.githubusercontent.com/api-evangelist/redoc/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/redoc/refs/heads/main/apis.yml)
+**Areas:** API Documentation · Developer Tools · Documentation · OpenAPI · Reference · Renderer · A2A
 
-## Scope
+## ReDoc on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for ReDoc is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/redoc/](https://apis.io/providers/redoc/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (1)
 
-API Documentation, Developer Tools, Documentation, OpenAPI, Reference, Renderer
+- [ReDoc](https://apis.io/apis/redoc/redoc/) — ReDoc is an open-source API documentation renderer for OpenAPI specifications, originally created by Rebilly and now maintained by Redocly. It generates a…
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-18
-- **Modified:** 2026-05-02
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### JSON Schema (1)
 
-### ReDoc
+The data models the API reads and writes.
 
-Open-source OpenAPI documentation renderer generating a three-panel layout from OpenAPI 3.1, 3.0, and Swagger 2.0. Supports vendor extensions (x-logo, x-tagGroups, x-codeSamples, x-internal) and all major deployment methods.
+- [ReDoc Configuration](https://apis.io/schemas/redoc/redoc-configuration/)
 
-**Human URL:** [https://redocly.com/redoc](https://redocly.com/redoc)
+#### JSON Structure (1)
 
-#### Tags
+Data models expressed in JSON Structure.
 
-API Documentation, Developer Tools, Documentation, OpenAPI, Reference, Renderer
+- [Redoc Configuration Structure](https://apis.io/json-structure/redoc/redoc-configuration-structure/)
 
-#### Properties
+#### JSON-LD (1)
 
-- [Website](https://redocly.com/redoc)
-- [Documentation](https://redocly.com/docs/redoc)
-- [GitHub](https://github.com/Redocly/redoc)
-- [LiveDemo](https://redocly.github.io/redoc/)
-- [JSONSchema](json-schema/redoc-configuration-schema.json)
-- [JSON-LD](json-ld/redoc-context.jsonld)
-- [JSONStructure](json-structure/redoc-configuration-structure.json)
-- [Vocabulary](vocabulary/redoc-vocabulary.yml)
+Linked-data contexts for the provider's vocabulary.
 
----
+- [Redoc Context](https://apis.io/jsonld/redoc/redoc-context/)
 
-## Examples
+#### Vocabulary (1)
 
-| File | Description |
-|---|---|
-| [examples/redoc-html-tag-example.json](examples/redoc-html-tag-example.json) | Using ReDoc as an HTML custom element |
-| [examples/redoc-react-example.json](examples/redoc-react-example.json) | Using RedocStandalone React component |
-| [examples/redoc-vendor-extensions-example.json](examples/redoc-vendor-extensions-example.json) | x-logo, x-tagGroups, x-codeSamples, x-internal extension examples |
+The provider's domain terms, defined.
 
-## Common Properties
+- [ReDoc Vocabulary](https://apis.io/vocabularies/redoc/redoc-vocabulary/)
 
-- [Documentation](https://redocly.com/docs/redoc)
-- [GitHub](https://github.com/Redocly/redoc)
-- [LiveDemo](https://redocly.github.io/redoc/)
-- [npm](https://www.npmjs.com/package/redoc)
-- [CDN](https://cdn.redoc.ly/redoc/latest/bundles/redoc.standalone.js)
-- [Reference](https://redocly.com/docs/redoc/config)
-- [Reference](https://redocly.com/docs/api-reference-docs/specification-extensions/)
-- [GettingStarted](https://redocly.com/docs/redoc/deployment)
-- [CLI](https://redocly.com/docs/cli/commands/build-docs)
-- [Changelog](https://github.com/Redocly/redoc/blob/main/CHANGELOG.md)
-- [Docker](https://hub.docker.com/r/redocly/redoc)
+#### Examples (3)
+
+Example requests and responses.
+
+- [Redoc Html Tag Example](https://apis.io/examples/redoc/redoc-html-tag-example/)
+- [Redoc React Example](https://apis.io/examples/redoc/redoc-react-example/)
+- [Redoc Vendor Extensions Example](https://apis.io/examples/redoc/redoc-vendor-extensions-example/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [ReDoc — jsonschema rules](https://apis.io/rules/redoc/redoc-jsonschema-spectral-rules/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Redoc Domain Security](https://apis.io/security/redoc/redoc-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Redoc Plans Pricing](https://apis.io/plans/redoc/redoc-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Redoc Rate Limits](https://apis.io/rate-limits/redoc/redoc-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Redoc Finops](https://apis.io/finops/redoc/redoc-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://redocly.com/)
-- [GitHubOrg](https://github.com/Redocly)
-- [X](https://twitter.com/Redocly)
-- [LinkedIn](https://www.linkedin.com/company/redocly)
-- [License](https://github.com/Redocly/redoc/blob/main/LICENSE)
+- [Documentation](https://redocly.com/docs/redoc)
+- [Getting started](https://redocly.com/docs/redoc/deployment)
+- [Support](https://redocly.com/contact-us)
+- [Changelog](https://github.com/Redocly/redoc/blob/main/CHANGELOG.md)
+- [Blog](https://redocly.com/blog/feed.xml)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 25.3** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 13.9 |
+| Contract governance | 23.5 |
+| Operational transparency | 28.9 |
+| Developer ergonomics | 42.9 |
+| Access clarity | 7.9 |
+
+**Agent readiness 6.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | conformant |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/redoc/](https://apis.io/providers/redoc/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for ReDoc: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/redoc/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
